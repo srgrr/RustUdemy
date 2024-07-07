@@ -16,3 +16,7 @@ Python is Safe and Concurrent, but does not offer Speed
 C/C++ offers Speed and Concurrency, but it is not Safe (due to wild memory management basically)
 
 Rust intends to cover these three vertices at once.
+
+# Repo with exercises
+
+This course includes a repo with exercises. I've downloaded it and added it as a submodule here. The repo is named ultimate_rust_crash_course.git
