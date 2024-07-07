@@ -93,4 +93,4 @@ Compiles (if needed) the program AND runs it. The tree now looks as follows:
 
 Check my `gitignore` file for regexs (asked chatGPT for it lol)
 
-
+Cargo builds stuff with debug symbols by default. `cargo run --release` gets rid of such symbols.
