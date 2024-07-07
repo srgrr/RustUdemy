@@ -15,9 +15,13 @@ fn main() {
   // Variables can also be declared as tuples following a python-like LHS-RHS matching
   let (first_integer, second_integer) = (1, 2);
 
+  // We can also declare constants...
+  // We MUST specify their type in the code
+  const BIGASS_CONSTANT: i32 = 1237;
+
   // Let's add a print here so the compiler won't throw us ugly warnings
   // (or not too many at least)
-  let total = some_integer + another_integer + mutable_integer + first_integer + second_integer;
+  let total = some_integer + another_integer + mutable_integer + first_integer + second_integer + BIGASS_CONSTANT;
 
   println!("{}", total);
 }
