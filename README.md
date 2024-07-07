@@ -130,3 +130,20 @@ fn main() {
   println!("{}", total);
 }
 ```
+
+# Scope
+Like in other languages, Rust does have the concept of scope.
+
+Like in C/C++, scopes are defined by code blocks e.g.
+
+```
+let x = 5;
+{
+  let x = 99;
+  let y = 100;
+  // x = 5 is shadowed by x = 99, and y is only visible within the block
+  // this print statement would make the program to not compile if moved
+  // outside the block
+  println!("{} {}", x, y);
+}
+```
