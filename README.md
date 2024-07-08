@@ -152,3 +152,16 @@ let x = 5;
 The statement of this exercise is in the `README.md` file in the corresponding folder of the course's repo.
 
 I'm naming this folder `exercise_a` instead of `variables` because I already used that name for a miniproject whose intention was to toy around with variables.
+
+# Functions
+Functions are defined using the `fn` keyword.
+
+Functions can be declared in any order (unlike in C).
+
+Type annotations for parameters and return type are required.
+
+```
+fn f(x: t1, y: t2) -> t3
+```
+
+Varargs are not allowed, nor variable type params.
