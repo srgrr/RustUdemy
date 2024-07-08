@@ -147,3 +147,8 @@ let x = 5;
   println!("{} {}", x, y);
 }
 ```
+
+# Exercise A
+The statement of this exercise is in the `README.md` file in the corresponding folder of the course's repo.
+
+I'm naming this folder `exercise_a` instead of `variables` because I already used that name for a miniproject whose intention was to toy around with variables.
