@@ -165,3 +165,5 @@ fn f(x: t1, y: t2) -> t3
 ```
 
 Varargs are not allowed, nor variable type params.
+
+NoneType or "void" is implemented by just not annotating any return type in the function's signature.

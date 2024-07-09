@@ -67,3 +67,4 @@ release/
 .rustup/
 cargo-target/
 
+.idea
