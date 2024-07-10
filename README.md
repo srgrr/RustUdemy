@@ -172,4 +172,10 @@ NoneType or "void" is implemented by just not annotating any return type in the 
 
 IntelliJ seems to be the most recommended IDE for programming in Rust.
 
+# Exercise B
 
+This exercise can be found in the `b_functions` folder in the root of this repo.
+
+The exercise itself is not very complex and can be done by learning the contents in this course. No SO/ChatGPT queries required.
+
+It also mentions the `cargo clippy` feature, which throws a bunch of warnings and suggestions regarding your code.
