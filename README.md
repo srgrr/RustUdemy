@@ -249,3 +249,32 @@ Booleans are `bool` and can be `true` or `false`.
 There's also `char`. `char` are not ASCII but unicode, meaning that chars a 4-byte, unlike in C++.
 
 Rust strings are UTF-8 and chars are not, so it's questionable how useful those actually are.
+
+# Tuples and Arrays
+
+Tuples are defined with parentheses
+
+```
+let info = (1, 3.3, 999);
+```
+
+Fields have no name so they're accessed via 0-based indexing
+
+```
+let jets = info.0;
+```
+
+Tuples have a maximum arity of 12. This seems to be an arbitrary limited implemented by the developers as tuples end up being "hardcoded" in the resulting binary.
+
+Maybe the course is outdated though, I wrote this code
+
+```
+fn main() {
+  let wrong = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+  println!("{}", wrong.18);
+}
+```
+
+And could compile and run it with no problem whatsoever.
+
+The module can be found in `tuple_limit` in the root of this repo.
