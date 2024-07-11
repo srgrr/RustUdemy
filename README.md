@@ -168,10 +168,6 @@ Varargs are not allowed, nor variable type params.
 
 NoneType or "void" is implemented by just not annotating any return type in the function's signature.
 
-# IDE for programming
-
-IntelliJ seems to be the most recommended IDE for programming in Rust.
-
 # Exercise B
 
 This exercise can be found in the `b_functions` folder in the root of this repo.
