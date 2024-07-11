@@ -252,6 +252,7 @@ Rust strings are UTF-8 and chars are not, so it's questionable how useful those 
 
 # Tuples and Arrays
 
+## Tuples
 Tuples are defined with parentheses
 
 ```
@@ -278,3 +279,22 @@ fn main() {
 And could compile and run it with no problem whatsoever.
 
 The module can be found in `tuple_limit` in the root of this repo.
+
+## Arrays
+Arrays can be defined by using square brackets in two different ways.
+
+```
+let arr = [1, 2, 3];
+```
+
+```
+let arr = [initial_value; size];
+```
+
+Or with both
+
+```
+let arr: [type; size] = [...];
+```
+
+Arrays have its size limited to 32. They're optimized to be stored in the current function's stack and I guess this limitation comes from there too.
