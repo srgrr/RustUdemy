@@ -215,3 +215,20 @@ fn main() {
     println!("Total area of a 2x2 square is {}", total_area);
 }
 ```
+
+# Standard library and community libraries
+
+Rust, like c++, contains an `std` module that can be imported by default (i.e. without having to explicitly add the dependency anywhere) e.g.
+
+```
+use std::collections::HashMap;
+```
+
+And, like Python's `pypi`, theres `crates.io` where community libraries are stored. Those libraries are called `crates` and can be retrieved via `cargo`.
+
+For example, let's say we want to import the `rand` library (which contains various RNG related functionalities). It's enough to add a section in our `Cargo.toml` as follows
+
+```
+[dependencies]
+rand = "0.6.5"
+```
