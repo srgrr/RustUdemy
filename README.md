@@ -175,3 +175,43 @@ This exercise can be found in the `b_functions` folder in the root of this repo.
 The exercise itself is not very complex and can be done by learning the contents in this course. No SO/ChatGPT queries required.
 
 It also mentions the `cargo clippy` feature, which throws a bunch of warnings and suggestions regarding your code.
+
+# A deeper look into the module system
+
+As we have seen before, `cargo new module_name` creates a module `module_name`.
+
+```
+module_name
+├── Cargo.toml
+└── src
+    └── main.rs
+```
+
+`Cargo.toml` is the kind-of Rust's `pom.xml`. `main.rs` is where the code goes and where the entry point of the module is.
+
+A `lib.rs` file can also be added
+
+```
+module_name
+├── Cargo.toml
+└── src
+    ├── lib.rs
+    └── main.rs
+```
+
+There we can define functions e.g.
+
+```
+pub fn compute_area(w: i32, h: i32) -> i32 {
+  w * h
+}
+```
+
+And use it in our `main.rs` file by using the scope operator `::`
+
+```
+fn main() {
+    let total_area: i32 = module_name::compute_area(2, 2);
+    println!("Total area of a 2x2 square is {}", total_area);
+}
+```
