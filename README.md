@@ -232,3 +232,7 @@ For example, let's say we want to import the `rand` library (which contains vari
 [dependencies]
 rand = "0.6.5"
 ```
+
+# Scalar Types
+
+Like in C++, Rust has unsigned and signed integers. Types are specified as `(u|i)-(N|size)`. u means unsigned, i means signed (actually integer I guess). N can be 8, 16, 32, 64, 128. Supported types vary accordingly to the target architecture. Size is the size of a pointer in the target system/architecture.
