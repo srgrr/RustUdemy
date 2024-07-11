@@ -236,3 +236,16 @@ rand = "0.6.5"
 # Scalar Types
 
 Like in C++, Rust has unsigned and signed integers. Types are specified as `(u|i)-(N|size)`. u means unsigned, i means signed (actually integer I guess). N can be 8, 16, 32, 64, 128. Supported types vary accordingly to the target architecture. Size is the size of a pointer in the target system/architecture.
+
+Floats are defined with the f prefix and can be 32 o 64 bits. They're declared and operated like we do in C++, types can be enforced as follows
+
+```
+let a = 3.14f32;
+let b = 3.14f64;
+```
+
+Booleans are `bool` and can be `true` or `false`.
+
+There's also `char`. `char` are not ASCII but unicode, meaning that chars a 4-byte, unlike in C++.
+
+Rust strings are UTF-8 and chars are not, so it's questionable how useful those actually are.
