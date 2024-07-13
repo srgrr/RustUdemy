@@ -298,3 +298,7 @@ let arr: [type; size] = [...];
 ```
 
 Arrays have its size limited to 32. They're optimized to be stored in the current function's stack and I guess this limitation comes from there too.
+
+# Exercise C
+
+This exercise, named `c_simple_types` in the root of this repo, is a simple exercise about types. It's easy to understand and follow.
