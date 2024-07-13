@@ -401,3 +401,6 @@ let msg2  = String::from("Hello");
 ```
 
 Strings are UTF8. This means that byte-based access doesnt guarantee we're accessing the right character. Using `nth` is encouraged.
+
+# Exercise D
+Again, exercise D was super trivial and easy to follow. Find it `d_control_flow_strings` (no exercise about strings whatsoever lol).
