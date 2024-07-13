@@ -376,3 +376,28 @@ for num in 0..=100 {
 
 }
 ```
+
+# Strings
+
+Strings are NOT trivial at all in Rust.
+
+The two most common types of strings are borrowed string slices and Strings (with capital S).
+
+Borrowed string slices cannot be modified whereas Strings do not impose such limitation.
+
+A borrowed string slice is a pointer+len array. A string is a pointer+len+capacity array.
+
+String literals such as
+
+```
+let msg = "Hello";
+```
+
+Are string slices. Explicit conversion is required if what we want are strings
+
+```
+let msg = "Hello".to_string();
+let msg2  = String::from("Hello");
+```
+
+Strings are UTF8. This means that byte-based access doesnt guarantee we're accessing the right character. Using `nth` is encouraged.
