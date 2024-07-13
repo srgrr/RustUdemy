@@ -302,3 +302,77 @@ Arrays have its size limited to 32. They're optimized to be stored in the curren
 # Exercise C
 
 This exercise, named `c_simple_types` in the root of this repo, is a simple exercise about types. It's easy to understand and follow.
+
+# Control flow
+
+## if-else
+
+if-else statements are pretty much like in C++ or in Java except for the fact that here they ALWAYS return something
+
+```
+val = if num == 5 {
+  "five"
+} else if num == 4 {
+  "four"
+} else {
+  "other"
+};
+```
+
+The semicolon is only necessary when we're using the return value for something specific, otherwise Rust will allow us to write it as if it was a code block.
+
+## Unconditional Loops
+
+They're kind of self explanatory. They work as `while(1)` loops in C
+
+```
+'loop_label: loop {
+  loop {
+    break 'loop_label;
+  }
+}
+```
+
+They can also have labels. `break` and `continue` statements can include a label so we know which loop we're breaking from. In the example above, the `break` statement is breaking both loops.
+
+## While loop
+
+```
+while cond {
+  stuff();
+}
+```
+
+## Foreach loop
+
+```
+for num in [1, 2, 3].iter() {
+  stuff();
+}
+```
+
+Like in Python, for loops support type unwrapping e.g.
+
+```
+let array = [(1, 2), (3, 4)];
+
+for (x, y) in array.iter() {
+  stuff(x, y);
+}
+```
+
+Range-based loops can be written as follows
+
+```
+for num in 0..100 {
+
+}
+```
+
+You can make the end inclusive by adding an = sign
+
+```
+for num in 0..=100 {
+
+}
+```
