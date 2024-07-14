@@ -446,4 +446,8 @@ fn do_stuff(s: &mut String) {
 }
 ```
 
+# Exercise E
+
+Exercise E can be found in `e_ownership_references` in the root of this directory. It consists of a bunch of exercises regarding references, borrowing and manipulation of the contents of variables. No SO/prompting was required in order for us to complete this.
+
 
