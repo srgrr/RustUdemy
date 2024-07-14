@@ -589,3 +589,30 @@ enum Result<T, E> {
 # Exercise G
 
 This exercise can be found in `g_collections_enums`. It's about doing what the comments tell you to do too.
+
+# Closures
+
+Closures are kind of lambda functions
+
+```
+let f = |x, y| { x + y };
+```
+
+Closures will borrow any reference to any value referred within it (even if it's not specified as parameter)
+
+```
+let s = "aaaa".to_string();
+let f = || {
+  println!("{}", s);
+};
+
+f();
+```
+
+The call to `f()` will make the closure own `s` until we go out of its scope.
+
+Closures can be used to write fancy, functional oneliners and make people hate you
+
+```
+v.iter().map(|x| x * 3).filter(|x| *x > 10)...
+```
