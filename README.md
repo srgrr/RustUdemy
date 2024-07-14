@@ -450,4 +450,39 @@ fn do_stuff(s: &mut String) {
 
 Exercise E can be found in `e_ownership_references` in the root of this directory. It consists of a bunch of exercises regarding references, borrowing and manipulation of the contents of variables. No SO/prompting was required in order for us to complete this.
 
+# Structs
 
+They are the "classes" of Rust. Pretty much like in C++, they can have attributes and methods:
+
+```
+struct RedFox {
+  enemy: bool,
+  life: u8,
+}
+
+impl RedFox {
+  fn new() -> Self {
+    Self {
+      enemy: true,
+      life: 70,
+    }
+  }
+  fn move(self) { ... }
+  fn borrow(&self) { ... }
+  fn mut_borrow(&mut self) { ... }
+}
+```
+
+As our intuition tells us, the `new` "constructor" method can be called via scoping the struct first
+
+```
+let fox = RedFox::new();
+```
+
+And the move method with the class dot operator
+
+```
+fox.move();
+```
+
+Note that the `self` parameter needs to be specified (pretty much like in Python).
