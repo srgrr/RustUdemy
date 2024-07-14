@@ -515,3 +515,6 @@ fn print_noise<T: Noisy>(item: T) {
   println!("{}", item.get_noise());
 }
 ```
+
+# Exercise F
+Exercise f can be found `f_structs_traits`. It also introduces the `#[derive(Debug)]` directive that, when placed on top of struct definitions, allows us to print them as strings by literally putting them as parameters in the `println` macro.
