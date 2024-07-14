@@ -486,3 +486,32 @@ fox.move();
 ```
 
 Note that the `self` parameter needs to be specified (pretty much like in Python).
+
+# Traits
+
+Rust does not have inheritance. The most similar thing this language has are Traits.
+
+A trait is nothing but a "feature" that, by including it on your struct signatures you guarantee that any instance of this particular object will have certain methods and behaviors e.g.
+
+```
+struct RedFox {
+  enemy: bool,
+  life: u32,
+}
+
+trait Noisy {
+  fn get_noise(&self) -> &str;
+}
+
+impl Noisy for RedFox {
+  fn get_noise(&self) -> &str { "Meow?" }
+}
+```
+
+So you can create methods whose only assumption about a given input parameter is that they have such trait:
+
+```
+fn print_noise<T: Noisy>(item: T) {
+  println!("{}", item.get_noise());
+}
+```
