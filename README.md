@@ -422,3 +422,28 @@ Invalidates s1 and treats it as uninitialized garbage when the contents of s1 ar
 
 This principle allows us to have a clear, unambiguous notion of who owns what and where the changes on a variable might come from, as opposed to free memory access and pointer manipulation in C or the reference system from Python and Java.
 
+# References and Borrowing
+
+Since variables can have only one owner at any given time, we might need something else to work with in order for this language to be viable. This is what references are for.
+
+References come in two kinds, mutable and immutable
+
+```
+x: &mut i32 = y; // mutable reference
+z: &mut i32 = y; // immutable reference
+```
+
+There can only be *one* mutable reference pointing to a given object at any time, and infinitely many immutable references.
+
+The reasons behind this are obvious: multiple mutable references pretty much ruin the concept of ownership and leave us in kind of the same spot we were in with C++, Java and Python.
+
+References can always be manually dereferenced, although there's some exceptions
+
+```
+fn do_stuff(s: &mut String) {
+  s.insert_str(0, "Hi, "); // No deref needed, handled by the language under the hood
+  *s = String::from("Replacement"); // Deref is needed here
+}
+```
+
+
