@@ -524,3 +524,62 @@ Exercise f can be found `f_structs_traits`. It also introduces the `#[derive(Deb
 They're kind of the same as in java or C++, even their names. It would be exhausting to enumerate them all here, but to give the big strokes you have vectors, hashmaps, sets, linked lists etc
 
 They're all templatised so you can specify the types later on, like we do in Java or C++
+
+# Enums
+
+Enums can be used like we do in Java or in C
+
+```
+enum Color {
+  Red,
+  Green,
+  Blue
+};
+
+let color = Color::Red;
+```
+
+But enums can also have values (I think is can also be the case in Java but the course sells it as a Rust-Has-This feature heh)
+
+```
+enum DispenserItem {
+  Empty,
+  Ammo(u8)
+};
+
+use DispenserItem::*;
+let item = Ammo(123);
+```
+
+## Option Enum
+One common built-in enum is the `Option` enum. Is pretty much an optional, not much mistery here
+
+```
+enum Option<T> {
+  Some(T),
+  None,
+};
+
+match my_variable {
+  Some(x) => { ... },
+  None => { ... },
+  _ => {...}, // Quite redundant in this example but included for completeness sake
+}
+```
+
+`match` is a pattern match. It must be exhaustive and also the `_` wildcard is available.
+
+`Option` also has the `is_some` and `is_none` methods. `Option` can also be iterated (and do nothing if it turns out to be none).
+
+## Result
+Result is another builtin enum.
+
+```
+#[must_use]
+enum Result<T, E> {
+  Ok(T),
+  Err(E)
+}
+```
+
+`#[must_use]` means that if the result is not used a compiler warning will be thrown.
