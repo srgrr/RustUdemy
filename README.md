@@ -630,3 +630,7 @@ fn main() {
   handle.join().unwrap();
 }
 ```
+
+# Exercise H
+
+Exercise H can be found in `h_closures_threads`.
