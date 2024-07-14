@@ -552,6 +552,7 @@ let item = Ammo(123);
 ```
 
 ## Option Enum
+
 One common built-in enum is the `Option` enum. Is pretty much an optional, not much mistery here
 
 ```
@@ -572,6 +573,7 @@ match my_variable {
 `Option` also has the `is_some` and `is_none` methods. `Option` can also be iterated (and do nothing if it turns out to be none).
 
 ## Result
+
 Result is another builtin enum.
 
 ```
@@ -583,3 +585,7 @@ enum Result<T, E> {
 ```
 
 `#[must_use]` means that if the result is not used a compiler warning will be thrown.
+
+# Exercise G
+
+This exercise can be found in `g_collections_enums`. It's about doing what the comments tell you to do too.
