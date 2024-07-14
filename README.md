@@ -404,3 +404,21 @@ Strings are UTF8. This means that byte-based access doesnt guarantee we're acces
 
 # Exercise D
 Again, exercise D was super trivial and easy to follow. Find it `d_control_flow_strings` (no exercise about strings whatsoever lol).
+
+# Ownership
+
+Now here's when the tricky part begins. Rust's memory mgmt is quite unique. It's centered about what they call ownership.
+
+Ownership is who owns a variable and Rust is crystal clear with this: there's only one valid owner at any time for a given value.
+
+That is, the following code
+
+```
+let s1 = String::from("abc");
+let s2 = s1;
+```
+
+Invalidates s1 and treats it as uninitialized garbage when the contents of s1 are moved to s2.
+
+This principle allows us to have a clear, unambiguous notion of who owns what and where the changes on a variable might come from, as opposed to free memory access and pointer manipulation in C or the reference system from Python and Java.
+
