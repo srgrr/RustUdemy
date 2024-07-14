@@ -419,7 +419,7 @@ let s2 = s1;
 ```
 
 Invalidates s1 and treats it as uninitialized garbage when the contents of s1 are moved to s2.
-
+f_structs_traits
 This principle allows us to have a clear, unambiguous notion of who owns what and where the changes on a variable might come from, as opposed to free memory access and pointer manipulation in C or the reference system from Python and Java.
 
 # References and Borrowing
@@ -546,7 +546,7 @@ enum DispenserItem {
   Empty,
   Ammo(u8)
 };
-
+f_structs_traits
 use DispenserItem::*;
 let item = Ammo(123);
 ```
@@ -612,7 +612,21 @@ f();
 The call to `f()` will make the closure own `s` until we go out of its scope.
 
 Closures can be used to write fancy, functional oneliners and make people hate you
-
+f_structs_traits
 ```
 v.iter().map(|x| x * 3).filter(|x| *x > 10)...
+```
+
+# Threads
+
+Rust's threads are kind of that of Java
+
+```
+use std::thread;
+
+fn main() {
+  let handle = thread::spawn(move || { ... });
+  // whatever you run between these two lines will happen concurrently to whatever the thread does
+  handle.join().unwrap();
+}
 ```
