@@ -518,3 +518,9 @@ fn print_noise<T: Noisy>(item: T) {
 
 # Exercise F
 Exercise f can be found `f_structs_traits`. It also introduces the `#[derive(Debug)]` directive that, when placed on top of struct definitions, allows us to print them as strings by literally putting them as parameters in the `println` macro.
+
+# Collections
+
+They're kind of the same as in java or C++, even their names. It would be exhausting to enumerate them all here, but to give the big strokes you have vectors, hashmaps, sets, linked lists etc
+
+They're all templatised so you can specify the types later on, like we do in Java or C++
