@@ -2,6 +2,7 @@
 
 This repo contains all the activities, exercises, notes, programs and scripts I wrote while learning Rust.
 
+
 I followed the following course:
 
 Ultimate Rust Crash Course
